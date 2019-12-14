@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light ">
+  <div class="navbar-header">
+    <a class="navbar-brand" [routerLink]="['/home']">FiniteLoop</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+  </div>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/design']" >Design</a>
+   
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">My Account</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownId">
+          <a class="dropdown-item" href="#">Buy InfiniteLoop Pro</a>
+          <a class="dropdown-item" href="#">Refer a Friend</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <!-- <input class="form-control mr-sm-2 pill" type="text" placeholder="Find Courses" />
+      <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">
+          <i class="fa fa-search"> 
+            </i> 
+      </button> -->
+      <div>
+        <input class="form-control mr-sm-2 pill" type="text" placeholder="Find Courses" />
+        <i class="fa fa-search">
+        </i>
+
+      </div>
+    </form>
+
+  </div>
+</nav>
+

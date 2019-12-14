@@ -1,0 +1,118 @@
+<div class="jumbotron jumbotron-fluid bg-info">
+  <div class="container-fluid text-center pt-3">
+    <h1 class="display-2">Campaign Management System</h1>
+    <p class="lead">A One place full stack mail design platform</p>
+
+    <div class="btn-group mt-2" role="group" aria-label="Basic example">
+      <!-- <button type="button" class="btn btn-primary btn-lg">Register Now</button>
+        <a class="btn btn-secondary btn-lg" href="#speakers">Login</a> -->
+      <button mat-raised-button color="primary" class="btn btn-lg " data-toggle="modal"
+      data-target="#myModal1">Register</button>
+      <button mat-raised-button color="accent" class="btn btn-lg" data-toggle="modal"
+        data-target="#myModal">Login</button>
+    </div>
+  </div>
+</div>
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <!-- <h4 class="modal-title">CodeNow Login</h4> -->
+        <!-- <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+            <mat-tab label="First">  Login </mat-tab>
+            <mat-tab label="Second"> Sign Up </mat-tab>
+           
+          </mat-tab-group> -->
+          
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+
+      <div class="modal-body">
+        <!-- <p>Login to start learning now.</p>
+         -->
+        <div class="text-center">
+          <img src="https://cdn.tc-library.org/NewLearningTimes/code_now_image_2bd7137c0491418eb19ff4b1ac837088.jpg"
+            alt="">
+        </div>
+        
+        <div class="form-group">
+          <label for="username"><span class="text-bold">Username</span></label>
+          <input type="text" name="username" id="username" class="form-control" placeholder="Enter Username"
+            aria-describedby="helpId">
+          <!-- <small id="helpId" class="text-muted">Help text</small> -->
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password" class="form-control" placeholder="Enter Password"
+            aria-describedby="helpId">
+          <!-- <small id="helpId" class="text-muted">Help text</small> -->
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default bg-dark text-light" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="myModal1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header bg-info">
+          <h4 class="modal-title">CodeNow Registration</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+  
+        </div>
+  
+        <div class="modal-body">
+          <!-- <p>Login to start learning now.</p>
+           -->
+          <div class="text-center">
+            <img src="https://cdn.tc-library.org/NewLearningTimes/code_now_image_2bd7137c0491418eb19ff4b1ac837088.jpg"
+              alt="">
+          </div>
+          <div class="form-group">
+            <label for="username"><span class="text-bold">Email</span></label>
+            <input type="text" name="username" id="email" class="form-control" placeholder="Enter Email"
+              aria-describedby="helpId">
+            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" class="form-control" placeholder="Enter Password"
+              aria-describedby="helpId">
+            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+          </div>
+          <div class="form-group">
+            <label for="password">Confirm Password</label>
+            <input type="text" name="password" id="password1" class="form-control" placeholder="Repeat Password"
+              aria-describedby="helpId">
+            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Register</button>
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default bg-dark text-light" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <!-- <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+      <mat-tab label="Certifications">Certifications</mat-tab>
+      <mat-tab label="Video Lectures">Video Lectures</mat-tab>
+      <mat-tab label="Excel Courses"> Excel Courses </mat-tab>
+    </mat-tab-group> -->
+
+

@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="jumbotron bg-dark">
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let item of courses">
+        <a [routerLink]="['/courses/course-details/', item.cid]"><app-course [data]="item"></app-course></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+
+.example-header-image {
+  background-image: url('https://lh3.googleusercontent.com/VpeWjU3AWTtMR9kaY9zOSzKN3InLWKDe-gE8AAHBFCco_YQbjtZrnVZ9bm0ZkP87hEg=s180-rw');
+  background-size: cover;
+}
+img {
+  border-radius: 50%;
+  height: 350px;
+  /* max-height: 400px; */
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+div.foo {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 8em;
+  margin: 0.2em;
+  position: relative;
+  color: darkcyan;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before,
+.letter:after {
+  position: absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top: 0;
+  left: 0;
+}
+.letter,
+.letter:before,
+.letter:after {
+  transition: all 0.3s ease-in-out;
+}
+.letter:before {
+  color: #00b4f1;
+  text-shadow: -1px 0px 1px rgba(255, 255, 255, 0.8),
+    1px 0px 1px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+}
+.letter:after {
+  color: rgba(0, 0, 0, 0.11);
+  z-index: 2;
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    skew(0deg, 1deg);
+}
+.letter:hover:before {
+  color: #000000;
+  transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+.letter:hover:after {
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(40deg) rotateZ(0deg)
+    skew(0deg, 22deg);
+}
+
+li {
+  display: inline;
+}
+.pill{
+  border-radius: 25px;
+}
+.input-icons{
+ position: absolute;
+}
+.btn{
+border: 1px solid #ddd;
+/* background-color: inherit; */
+padding: 4px 12px;
+
+ -o-transition: background-color .2s ease-in; 
+ -moz-transition: background-color .2s ease-in;
+ -webkit-transition: background-color .2s ease-in; 
+ transition: background-color .2s ease-in; 
+}
+
+.btn:hover {
+ background-color: #e5e5e5;    
+ color: black;
+}
+
+.btn:active {
+ background-color: #ccc;
+}
+img{
+ width: 200px;
+}
+/* input[type=text], input[type=password] {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ box-sizing: border-box;
+} */
+
+/* Set a style for all buttons */
+label{
+  font-weight: bold;
+}

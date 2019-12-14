@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+.example-card {
+  /* width: 300px; */
+  height: auto;
+  background-color: white;
+}
+.img {
+  /* border-radius: 95%; */
+  height: 250px;
+  width: auto;
+  align-content: center;
+}
+/* .round-progress {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png");
+  border-radius: 1000px; /* so the image doesn't overflow */
+/* overflow: hidden;
+} */
+.example-card:hover {
+  box-shadow: 10px 5px 10px darkgrey;
+  cursor: pointer;
+}
+
+.example-header-image {
+  background-image: url('https://lh3.googleusercontent.com/VpeWjU3AWTtMR9kaY9zOSzKN3InLWKDe-gE8AAHBFCco_YQbjtZrnVZ9bm0ZkP87hEg=s180-rw');
+  background-size: cover;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+div.foo {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 8em;
+  margin: 0.2em;
+  position: relative;
+  color: darkcyan;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before,
+.letter:after {
+  position: absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top: 0;
+  left: 0;
+}
+.letter,
+.letter:before,
+.letter:after {
+  transition: all 0.3s ease-in-out;
+}
+.letter:before {
+  color: #00b4f1;
+  text-shadow: -1px 0px 1px rgba(255, 255, 255, 0.8),
+    1px 0px 1px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+}
+.letter:after {
+  color: rgba(0, 0, 0, 0.11);
+  z-index: 2;
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    skew(0deg, 1deg);
+}
+.letter:hover:before {
+  color: #000000;
+  transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+.letter:hover:after {
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(40deg) rotateZ(0deg)
+    skew(0deg, 22deg);
+}
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+.pill {
+  /* background-color: rgb(24, 220, 251); */
+  font-size: medium;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+}

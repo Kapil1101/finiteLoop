@@ -1,0 +1,178 @@
+<div class="example-button-row text-center mt-4">
+  <button mat-raised-button class="mr-3" (click)="Input4()">List</button>
+  <button mat-raised-button color="primary" class="mr-3" (click)="Input1()">Input</button>
+  <button mat-raised-button color="accent" class="mr-3" (click)="Input2()">Button</button>
+  <button mat-raised-button color="warn" class="mr-3" (click)="Input3()">Movable Div</button>
+  <button mat-raised-button class="mr-3" (click)="Input5()" >Card</button>
+  <a mat-raised-button routerLink="." class="mr-3">TextArea</a>
+</div>
+
+<div class="container">
+
+<div *ngFor="let i of arrayTwo(input1)">
+  <div class="la" cdkDrag  [attr.id]="'input'+i" >
+    <div class="form-group">
+      <label for="username"><span class="text-bold" data-toggle="modal" [attr.id]="'inputs'+i" data-target="#myModal" (click)="fun1('inputs'+i)">Username</span></label>
+      <input type="text" name="username"  class="form-control" placeholder="Please Enter Here"
+        aria-describedby="helpId">
+      <!-- <small id="helpId" class="text-muted">Help text</small> -->
+      <span class="badge badge-light text-danger text-light x" (click)="Remove('input'+i)">X</span>
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor="let i of arrayTwo(input2)">
+  <!-- <button mat-raised-button  color="primary"  cdkDrag>Sample Button</button> -->
+  <div [attr.id]="'btn'+i" class="la">
+    <button mat-raised-button color="accent" class="mr-3" cdkDrag data-toggle="modal" [attr.id]="'btns'+i" data-target="#myModal" (click)="fun1('btns'+i)">Button
+      <span class="badge badge-light text-danger text-light x2" (click)="Remove('btn'+i)">X</span>
+    </button>
+    
+  </div>
+</div>
+
+
+<div *ngFor="let i of arrayTwo(input3)">
+  <div [attr.id]="'div'+i" cdkDrag>
+    <div class="example-box" >
+      <span class="badge badge-light text-danger text-light x" (click)="Remove('div'+i)">X</span>
+    </div>
+  </div>
+</div>
+<div *ngFor="let i of arrayTwo(input5)">
+  <div [attr.id]="'card'+i" >
+   
+
+
+
+
+
+
+
+<mat-card class="example-card " cdkDrag>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title  >{{ data.title }}</mat-card-title>
+  </mat-card-header>
+
+  <div class="text-center mt-3">
+      <img mat-card-image class="img-responsive" src="{{ data.url }}" alt={{data.title}} class="img" />
+  </div>
+  <mat-progress-bar mode="determinate" value={{data.progress}}></mat-progress-bar>
+  <!-- <mat-progress-bar mode="query" color="accent"></mat-progress-bar>  -->
+  <mat-card-content>
+
+      <!-- <mat-progress-bar value=40></mat-progress-bar> -->
+    <p>
+      {{ data.desc }}
+
+    </p>
+
+    <!-- <button mat-button class="btn-primary ml-4 mr-4">LIKE</button>
+    <button mat-button class="btn btn-primary ml-4 mr-4">SHARE</button> -->
+    <button mat-button class="btn btn-block pill btn-info">Take the course</button>
+  </mat-card-content>
+  <span class="badge badge-light text-danger text-light x5" (click)="Remove('card'+i)">X</span>
+ </mat-card>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+   
+  </div>
+</div>
+
+
+<div *ngFor="let i of arrayTwo(input4)">
+  <div cdkDrag>
+    <div [attr.id]="'list'+i" >
+      <div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)" >
+        <div class="example-box" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
+      </div>
+      <span class="badge badge-light text-danger text-light x3" (click)="Remove('list'+i)">X</span>
+    </div>
+  </div>
+ 
+</div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head> -->
+<body>
+
+<div class="container">
+  <!-- <h2>Small Modal</h2> -->
+  <!-- Trigger the modal with a button -->
+  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal</button> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Change Name</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <!-- <p>This is a small modal.</p>
+           -->
+           <input type="text" id="in" #modal_input>
+           <button class="success" (click)="update(modal_input)">Update</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+<mat-card cdkDrag>
+  <mat-card-content>  
+  <mat-card-title>Email input</mat-card-title>
+  <mat-card-subtitle>Add Emails to send template</mat-card-subtitle>
+  
+    <mat-form-field class="demo-chip-list">
+        <mat-chip-list #chipList>
+          <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                   [removable]="removable" (removed)="remove(fruit)">
+            {{fruit.name}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="New Email"
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)" />
+
+          <span *ngIf="emailValid" class="danger">
+              Add valid email 
+          </span>
+        </mat-chip-list>
+      </mat-form-field>
+  </mat-card-content>
+  <button type="submit" class="btn btn-success btn-block">Send</button>
+</mat-card>
